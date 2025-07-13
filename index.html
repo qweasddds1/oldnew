@@ -58,25 +58,16 @@
 </style>
 </head>
 <body>
-
-<div id="seating-wrapper"><div id="seating-area" style="display: flex; flex-direction: column; gap: 12px; justify-content: center;"><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-0" style="background-color: rgb(255, 248, 220);" data-id="1-1">圓桌1-1</div><div class="table" data-key="r2-0" style="background-color: rgb(255, 248, 220);" data-id="1-2">圓桌2-1</div><div class="table" data-key="r3-0" style="background-color: rgb(255, 248, 220);" data-id="1-3">圓桌3-1</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-1" style="background-color: rgb(255, 248, 220);" data-id="2-1">圓桌1-2</div><div class="table" data-key="r2-1" style="background-color: rgb(255, 248, 220);" data-id="2-2">圓桌2-2</div><div class="table" data-key="r3-1" style="background-color: rgb(255, 248, 220);" data-id="2-3">圓桌3-2</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-2" style="background-color: rgb(255, 248, 220);" data-id="3-1">圓桌1-3</div><div class="table" data-key="r2-2" style="background-color: rgb(255, 248, 220);" data-id="3-2">圓桌2-3</div><div class="table" data-key="r3-2" style="background-color: rgb(255, 248, 220);" data-id="3-3">圓桌3-3</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-3" style="background-color: rgb(255, 248, 220);" data-id="4-1">圓桌1-4</div><div class="table" data-key="r2-3" style="background-color: rgb(255, 248, 220);" data-id="4-2">圓桌2-4</div><div class="table" data-key="r3-3" style="background-color: rgb(255, 248, 220);" data-id="4-3">圓桌3-4</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-4" style="background-color: rgb(255, 248, 220);" data-id="5-1">圓桌1-5</div><div class="table" data-key="r2-4" style="background-color: rgb(255, 248, 220);" data-id="5-2">圓桌2-5</div><div class="table" data-key="r3-4" style="background-color: rgb(255, 248, 220);" data-id="5-3">圓桌3-5</div></div></div></div>
+<div id="seating-wrapper"><div id="seating-area" style="display: flex; flex-direction: column; gap: 12px; justify-content: center;"><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-0" style="background-color: rgb(255, 248, 220); width: 122px; height: 122px; font-size: 16px;" data-id="1-1">女方爸爸<div><br></div><div><br></div><div><br></div><div>親友桌</div></div><div class="table" data-key="r2-0" style="background-color: rgb(255, 248, 220); width: 122px; height: 122px; font-size: 16px;" data-id="1-2">女方表哥表姊桌</div><div class="table" data-key="r3-0" style="background-color: rgb(255, 248, 220); width: 122px; height: 122px; font-size: 16px;" data-id="1-3">男方大姑</div><div class="table" data-key="r4-0" style="background-color: rgb(255, 248, 220); width: 122px; height: 122px; font-size: 16px;" data-id="1-4">男方大舅公</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r2-1" style="background-color: rgb(255, 248, 220); width: 122px; height: 122px; font-size: 16px;" data-id="2-2">女方高中同學桌</div><div class="table" data-key="r3-1" style="background-color: rgb(255, 248, 220); width: 122px; height: 122px; font-size: 16px;" data-id="2-3">男方二姑</div></div></div></div>
 <script>
   const guestData = {
-    "1-1": ["小明", "小美", "小華"],
-    "1-2": ["阿宏", "阿玉", "阿豪"],
-    "1-3": ["佳芳", "麗娟"],
-    "2-1": ["秀蘭", "美玲"],
-    "2-2": ["宇軒", "家豪"],
-    "2-3": ["阿亮", "小強"],
-    "3-1": ["曉恩", "芸芸"],
-    "3-2": ["曉華", "阿福"],
-    "3-3": ["靜宜", "佩佩"],
-    "4-1": ["阿德", "小志"],
-    "4-2": ["佩君", "欣怡"],
-    "4-3": ["阿明", "文傑"],
-    "5-1": ["志強", "婷婷"],
-    "5-2": ["雅雯", "柏豪"],
-    "5-3": ["凱婷", "阿健"]
+    "1-1": ["勝揚"],
+    "2-1": ["科璋"],
+    "2-2": ["咪咪"],
+    "3-1": ["伊森"],
+    "3-2": ["祐輝"],
+    "4-1": ["郁涵"]
+   
   };
 
   document.querySelectorAll('.table').forEach(table => {
