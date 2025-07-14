@@ -58,35 +58,36 @@
 </style>
 </head>
 <body>
-  <div id="seating-wrapper"><div id="seating-area" style="display: flex; flex-direction: column; gap: 12px; justify-content: center;"><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-1">勝揚</div><div class="table" data-key="r2-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-2">科璋</div><div class="table" data-key="r3-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-3">伊森</div><div class="table" data-key="r4-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-4">郁涵<div><br></div></div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div><div class="table" data-key="r2-1" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="2-2">咪咪</div><div class="table" data-key="r3-1" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="2-3">祐輝</div><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div></div></div></div>
-<script>
+
+<div id="seating-wrapper"><div id="seating-area" style="display: flex; flex-direction: column; gap: 12px; justify-content: center;"><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">勝揚</div><div class="table" data-key="r2-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">科璋</div><div class="table" data-key="r3-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">伊森</div><div class="table" data-key="r4-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">郁涵</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div><div class="table" data-key="r2-1" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">咪咪</div><div class="table" data-key="r3-1" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">祐輝</div><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div></div></div></div>  
+  <script>
   const guestData = {
-    "1-1": ["勝揚"],
-    "2-1": ["科璋"],
-    "2-2": ["咪咪"],
-    "3-1": ["伊森"],
-    "3-2": ["祐輝"],
-    "4-1": ["郁涵"]
-   
+  "r1-0": ["小明", "小美", "小華"],
+  "r1-1": ["佳芳", "麗娟"],
+  "r2-0": ["阿宏", "阿玉", "阿豪"],
+  "r2-1": ["宇軒", "家豪"],
+  "r3-0": ["曉恩", "芸芸"],
+  "r3-1": ["曉華", "阿福"],
+  "r4-0": ["阿德", "小志"]
+
   };
 
   document.querySelectorAll('.table').forEach(table => {
-    table.addEventListener('click', () => {
-      // 移除舊的名單
-      document.querySelectorAll('.guest-list').forEach(e => e.remove());
+  table.addEventListener('click', () => {
+    document.querySelectorAll('.guest-list').forEach(e => e.remove());
 
-      const pos = table.getAttribute('data-id');
-      const guests = guestData[pos] || ["（無資料）"];
+    const key = table.getAttribute('data-key'); // ✅ 改用 data-key
+    const guests = guestData[key] || ["（無資料）"];
 
-      const listDiv = document.createElement('div');
-      listDiv.className = 'guest-list';
-      listDiv.innerHTML = `<strong>${table.textContent} 名單：</strong><ul>` +
-        guests.map(name => `<li>${name}</li>`).join('') +
-        `</ul>`;
+    const listDiv = document.createElement('div');
+    listDiv.className = 'guest-list';
+    listDiv.innerHTML = `<strong>${table.textContent} 名單：</strong><ul>` +
+      guests.map(name => `<li>${name}</li>`).join('') +
+      `</ul>`;
 
-      table.insertAdjacentElement('afterend', listDiv);
-    });
+    table.insertAdjacentElement('afterend', listDiv);
   });
+});
 </script>
 
 
