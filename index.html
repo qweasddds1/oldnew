@@ -1,3 +1,30 @@
+盧科璋
+luekezhang
+隱形
+
+盧科璋 — 昨天 下午 11:03
+這個我要怎麼改到我的網頁裡面?
+胖呱 — 昨天 下午 11:03
+全選複製
+或是 你直接下載我的
+盧科璋 — 昨天 下午 11:04
+再載一次上面你丟的那個嗎?
+胖呱 — 昨天 下午 11:05
+<body>
+  <button onclick="switchView('edit')">自動回應產出</button>
+  <button onclick="switchView('export')">座位圖產出</button>
+
+  <div id="edit-view">
+   <!DOCTYPE html>
+展開
+message.txt
+42 KB
+yes 但用這個 我改成用數字
+這樣假設真的需要大尺寸 可以超出拉桿的限制 然後加了預設按鈕 可以回復原本大小
+盧科璋 — 昨天 下午 11:12
+這張圖的程式碼你是用哪個程式?
+胖呱 — 昨天 下午 11:16
+github
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -59,15 +86,24 @@
 </head>
 <body>
 
-<div id="seating-wrapper"><div id="seating-area" style="display: flex; flex-direction: column; gap: 12px; justify-content: center;"><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-1">勝揚</div><div class="table" data-key="r2-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-2">科璋</div><div class="table" data-key="r3-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-3">伊森</div><div class="table" data-key="r4-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-4">郁涵<div><br></div></div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div><div class="table" data-key="r2-1" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="2-2">咪咪</div><div class="table" data-key="r3-1" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="2-3">祐輝</div><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div></div></div></div>  
-  <script>
+<div id="seating-wrapper"><div id="seating-area" style="display: flex; flex-direction: column; gap: 12px; justify-content: center;"><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-0" style="background-color: rgb(255, 248, 220);" data-id="1-1">圓桌1-1</div><div class="table" data-key="r2-0" style="background-color: rgb(255, 248, 220);" data-id="1-2">圓桌2-1</div><div class="table" data-key="r3-0" style="background-color: rgb(255, 248, 220);" data-id="1-3">圓桌3-1</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-1" style="background-color: rgb(255, 248, 220);" data-id="2-1">圓桌1-2</div><div class="table" data-key="r2-1" style="background-color: rgb(255, 248, 220);" data-id="2-2">圓桌2-2</div><div class="table" data-key="r3-1" style="background-color: rgb(255, 248, 220);" data-id="2-3">圓桌3-2</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-2" style="background-color: rgb(255, 248, 220);" data-id="3-1">圓桌1-3</div><div class="table" data-key="r2-2" style="background-color: rgb(255, 248, 220);" data-id="3-2">圓桌2-3</div><div class="table" data-key="r3-2" style="background-color: rgb(255, 248, 220);" data-id="3-3">圓桌3-3</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-3" style="background-color: rgb(255, 248, 220);" data-id="4-1">圓桌1-4</div><div class="table" data-key="r2-3" style="background-color: rgb(255, 248, 220);" data-id="4-2">圓桌2-4</div><div class="table" data-key="r3-3" style="background-color: rgb(255, 248, 220);" data-id="4-3">圓桌3-4</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-4" style="background-color: rgb(255, 248, 220);" data-id="5-1">圓桌1-5</div><div class="table" data-key="r2-4" style="background-color: rgb(255, 248, 220);" data-id="5-2">圓桌2-5</div><div class="table" data-key="r3-4" style="background-color: rgb(255, 248, 220);" data-id="5-3">圓桌3-5</div></div></div></div>
+<script>
   const guestData = {
-    "1-1": ["勝揚"],
-    "2-1": ["科璋"],
-    "2-2": ["咪咪"],
-    "3-1": ["伊森"],
-    "3-2": ["祐輝"],
-    "4-1": ["郁涵"],
+    "1-1": ["小明", "小美", "小華"],
+    "1-2": ["阿宏", "阿玉", "阿豪"],
+    "1-3": ["佳芳", "麗娟"],
+    "2-1": ["秀蘭", "美玲"],
+    "2-2": ["宇軒", "家豪"],
+    "2-3": ["阿亮", "小強"],
+    "3-1": ["曉恩", "芸芸"],
+    "3-2": ["曉華", "阿福"],
+    "3-3": ["靜宜", "佩佩"],
+    "4-1": ["阿德", "小志"],
+    "4-2": ["佩君", "欣怡"],
+    "4-3": ["阿明", "文傑"],
+    "5-1": ["志強", "婷婷"],
+    "5-2": ["雅雯", "柏豪"],
+    "5-3": ["凱婷", "阿健"]
   };
 
   document.querySelectorAll('.table').forEach(table => {
@@ -87,6 +123,729 @@
       table.insertAdjacentElement('afterend', listDiv);
     });
   });
+</script>
+
+... (還剩 4 行)
+收起
+github座位表.html
+5 KB
+https://github.com/david900916/abc_bot/blob/master/index.html
+GitHub
+abc_bot/index.html at master · david900916/abc_bot
+Contribute to david900916/abc_bot development by creating an account on GitHub.
+這是網頁連結
+https://david900916.github.io/abc_bot/
+胖呱 — 昨天 下午 11:20
+你要給我你的github 我才能給你分享讓你改
+或是你自己 也弄一個github page
+盧科璋 — 上午 12:17
+圖片
+這裡改好後我要如何執行?
+胖呱 — 上午 12:17
+名子要叫 index.html
+然後去 setting 看 page
+會有branch
+選master save 等一下下後 刷新 上面會有你的網址
+盧科璋 — 上午 01:41
+圖片
+我改好了 網址會出現在哪?
+胖呱 — 上午 01:41
+Settings
+page
+盧科璋 — 上午 01:42
+圖片
+這個是我要去試用嗎?
+胖呱 — 上午 01:42
+不是 你的是私人 你要先轉公開
+他只能用公開的
+settings 
+general　往下
+Change repository visibility
+圖片
+盧科璋 — 上午 01:47
+我改了
+胖呱 — 上午 01:47
+那就可以用page了
+盧科璋 — 上午 01:47
+圖片
+這個東西要選什麼?
+胖呱 — 上午 01:47
+第一個 掌握 改master 或 main
+然後save
+盧科璋 — 上午 01:48
+好了
+盧科璋 — 上午 02:01
+發現了一個錯誤
+胖呱 — 上午 02:01
+?
+盧科璋 — 上午 02:01
+座位圖產出那邊
+胖呱 — 上午 02:01
+yes?
+盧科璋 — 上午 02:02
+產生程式碼他的桌號是橫向產生
+不是直向下
+胖呱 — 上午 02:03
+?
+圖片
+啥?
+盧科璋 — 上午 02:03
+你打完字後
+按上面的產生程式碼
+會跟實際產生桌圖對不上
+胖呱 — 上午 02:04
+??
+盧科璋 — 上午 02:05
+圖片
+胖呱 — 上午 02:05
+圖片
+ㄛ 有了 異常出來了
+圖片
+盧科璋 — 上午 02:06
+連匯出的圖都會自己跑掉
+胖呱 — 上午 02:06
+會往左貼
+盧科璋 — 上午 02:07
+程式會向右數桌號
+胖呱 — 上午 02:18
+好了
+<body>
+  <button onclick="switchView('edit')">自動回應產出</button>
+  <button onclick="switchView('export')">座位圖產出</button>
+
+  <div id="edit-view">
+   <!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<title>座位表+關鍵字+場圖</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; }
+  #container { display: flex; gap: 40px; }
+  #left, #right { flex: 1; min-width: 350px; }
+  textarea { width: 100%; height: 150px; }
+  #keywordList { max-height: 250px; overflow-y: auto; border: 1px solid #ccc; padding: 5px; margin-top: 10px; width: 100%; }
+  #controls { margin-top: 10px; }
+  label { display: block; margin: 3px 0; cursor: pointer; user-select: none; }
+  button { margin-top: 10px; }
+  .batchBlock { background: #f4f4f4; padding: 10px; margin: 10px 0; border: 1px solid #ddd; position: relative; }
+  .copyBtn { position: absolute; top: 10px; right: 10px; cursor: pointer; background-color: #007bff; color: white; border: none; padding: 6px 10px; border-radius: 4px; }
+  #info { margin-top: 10px; clear: both; }
+  input[type=number], input[type=text] { width: 150px; margin-right: 10px; }
+  #preview { margin-top: 10px; background: #eef; padding: 10px; border: 1px solid #ccd; max-height: 150px; overflow-y: auto; white-space: pre-wrap; }
+  /* 座位表 */
+  .grid-container { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .row-label { font-weight: bold; margin-bottom: 5px; text-align: center; }
+  .seat-row { display: flex; flex-direction: column; gap: 5px; align-items: center; }
+  .seat {
+    width: 40px; height: 40px; background: #ddd; text-align: center; 
+    line-height: 40px; cursor: pointer; border-radius: 4px;
+    user-select: none;
+  }
+  .seat.selected { background: #4CAF50; color: white; }
+</style>
+</head>
+<body>
+
+<h2>整合版：座位表 + 關鍵字分批產生器</h2>
+<button onclick="resetAll()">🔄 清空所有設定並恢復預設</button>
+<div id="container">
+
+  <!-- 左側：關鍵字產生器 -->
+  <div id="left">
+    <h3>關鍵字匯入 (多種標點符號分隔均可)</h3>
+    <textarea id="inputKeywords" placeholder="請貼入關鍵字，多種標點符號可分隔"></textarea><br/>
+    <button onclick="loadKeywords()">載入關鍵字</button>
+
+    <div id="info"></div>
+
+    <div id="keywordList"></div>
+
+    <div id="controls">
+      <h3>快速選擇（支援多段範圍與逗號分隔，例如：1-5,8,10-12）</h3>
+      <input type="text" id="rangeInput" placeholder="輸入範圍，例如 1-10,15,20-25" />
+      <button onclick="selectCustomRange()">選擇範圍</button>
+      <button onclick="selectAll(true)">全選</button>
+      <button onclick="selectAll(false)">全不選</button>
+
+      <h3>選擇批次大小</h3>
+      批次大小（每批幾個關鍵字）：
+      <input type="number" id="batchSize" value="10" min="1" max="100" />
+      <button onclick="generateBatchCode()">分批產生JS程式碼</button>
+
+      <h3>選擇的關鍵字預覽：</h3>
+      <div id="preview">請先選擇關鍵字</div>
+    </div>
+
+    <h3>產生的程式碼（分批結果）：</h3>
+    <div id="result"></div>
+  </div>
+
+  <!-- 右側：座位表產生器 -->
+  <div id="right">
+    <h3>座位排列設定器（以排為主，直條顯示）</h3>
+    <label>排數（直向數量）：<input type="number" id="rowCount" value="4" min="1" max="20" /></label><br/>
+    <label>每排最多桌數（橫向數量）：<input type="number" id="colCount" value="10" min="1" max="30" /></label><br/>
+    <button onclick="generateGrid()">產生座位表</button>
+   <button id="selectAllSeatsBtn">全選桌圖</button>
+
+
+    <div class="grid-container" id="grid"></div>
+  </div>
+</div>
+
+<script>
+  // === 關鍵字分批產生器邏輯 ===
+// === 關鍵字分批產生器邏輯 ===
+let keywords = [];
+let selectedSeats = []; // 座位選擇
+
+function loadKeywords() {
+  const text = document.getElementById('inputKeywords').value;
+  localStorage.setItem('keywords_input', text); // 儲存輸入文字
+
+  keywords = text
+    .split(/[\n,;\.\-\，。；－]+/)
+    .map(s => s.trim())
+    .filter(s => s !== '');
+  keywords = Array.from(new Set(keywords));
+... (還剩 1,202 行)
+收起
+message.txt
+43 KB
+加上了隱形的桌子  讓排版可以正常
+盧科璋 — 上午 02:27
+ㄜ 我的還是一樣
+胖呱 — 上午 02:29
+??
+<body>
+  <button onclick="switchView('edit')">自動回應產出</button>
+  <button onclick="switchView('export')">座位圖產出</button>
+
+  <div id="edit-view">
+   <!DOCTYPE html>
+展開
+message.txt
+43 KB
+圖片
+痾 你是用自己寫的 還是 啥?
+盧科璋 — 上午 02:34
+我用你的
+胖呱 — 上午 02:34
+因為我的產出html是正常
+盧科璋 — 上午 02:34
+我沒寫
+胖呱 — 上午 02:36
+https://github.com/david900916/oldnew/blob/master/index.html
+GitHub
+oldnew/index.html at master · david900916/oldnew
+Contribute to david900916/oldnew development by creating an account on GitHub.
+Contribute to david900916/oldnew development by creating an account on GitHub.
+我的是正常顯示
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>座位查詢 - 轉置顯示</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f0f8ff;
+    text-align: center;
+  }
+  #seating-area {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+#seating-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+  .tables-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .table {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 248, 220);
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .guest-list {
+    margin-top: 6px;
+    font-size: 14px;
+    background: #fffbea;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 6px 10px;
+    text-align: left;
+  }
+  #original-seating {
+    display: none; /* 隱藏原始座位 */
+  }
+</style>
+</head>
+<body>
+
+<div id="seating-wrapper"><div id="seating-area" style="display: flex; flex-direction: column; gap: 12px; justify-content: center;"><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-1">aa</div><div class="table" data-key="r2-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-2">圓cc</div><div class="table" data-key="r3-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-3">d1</div><div class="table" data-key="r4-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-4">ddd</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div><div class="table" data-key="r2-1" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="2-2">d</div><div class="table" data-key="r3-1" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="2-3">圓sad</div><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div></div></div></div>
+  
+  <script>
+  const guestData = {
+    "1-1": ["小明", "小美", "小華"],
+    "1-2": ["阿宏", "阿玉", "阿豪"],
+    "1-3": ["佳芳", "麗娟"],
+    "2-1": ["秀蘭", "美玲"],
+    "2-2": ["宇軒", "家豪"],
+    "2-3": ["阿亮", "小強"],
+    "3-1": ["曉恩", "芸芸"],
+    "3-2": ["曉華", "阿福"],
+    "3-3": ["靜宜", "佩佩"],
+    "4-1": ["阿德", "小志"],
+    "4-2": ["佩君", "欣怡"],
+    "4-3": ["阿明", "文傑"],
+    "5-1": ["志強", "婷婷"],
+    "5-2": ["雅雯", "柏豪"],
+    "5-3": ["凱婷", "阿健"]
+  };
+
+  document.querySelectorAll('.table').forEach(table => {
+    table.addEventListener('click', () => {
+      // 移除舊的名單
+      document.querySelectorAll('.guest-list').forEach(e => e.remove());
+
+      const pos = table.getAttribute('data-id');
+      const guests = guestData[pos] || ["（無資料）"];
+
+      const listDiv = document.createElement('div');
+      listDiv.className = 'guest-list';
+      listDiv.innerHTML = `<strong>${table.textContent} 名單：</strong><ul>` +
+        guests.map(name => `<li>${name}</li>`).join('') +
+        `</ul>`;
+
+      table.insertAdjacentElement('afterend', listDiv);
+    });
+  });
+</script>
+... (還剩 5 行)
+收起
+github座位表.html
+4 KB
+ㄛ 名子的部份 不正常 但圖是正常了
+盧科璋 — 上午 02:39
+我匯出圖片跟githib那邊的程式有關?
+胖呱 — 上午 02:39
+no
+盧科璋 — 上午 02:39
+但我只是單純匯出圖片而已
+我的圖片都會向左
+我去雲端下載你的也是一樣
+胖呱 — 上午 02:40
+圖片
+圖片
+圖片
+圖片
+圖片
+圖片
+圖片正常
+盧科璋 — 上午 02:42
+還是是他存檔了才這樣
+胖呱 — 上午 02:44
+我還是不知道你說的問題是啥
+盧科璋 — 上午 02:45
+圖片
+我的打開還是長這樣
+胖呱 — 上午 02:51
+修好了
+<body>
+  <button onclick="switchView('edit')">自動回應產出</button>
+  <button onclick="switchView('export')">座位圖產出</button>
+
+  <div id="edit-view">
+   <!DOCTYPE html>
+展開
+message.txt
+43 KB
+匯出 html 可以正常了
+圖片
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head><meta charset="UTF-8"><title>座位匯出</title>
+  <style>
+    #seating-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 24px;
+    }
+    #seating-area {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      justify-content: center;
+    }
+    .tables-row {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+    }
+    .table {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(255, 248, 220);
+      border: 2px solid #ccc;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 18px;
+      white-space: nowrap;
+      cursor: default;
+    }
+    .invisible-table {
+      visibility: hidden;
+    }
+  </style>
+  </head>
+<body><div id="seating-wrapper"><div id="seating-area" style="display: flex; flex-direction: column; gap: 12px; justify-content: center;"><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-1">圓桌1-1</div><div class="table" data-key="r2-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-2">圓桌2-1</div><div class="table" data-key="r3-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-3">圓桌3-1</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div><div class="table" data-key="r2-1" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="2-2">圓桌2-2</div><div class="table" data-key="r3-1" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="2-3">圓桌3-2</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div><div class="table" data-key="r3-2" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="3-3">圓桌3-3</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div><div class="table" data-key="r3-3" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="4-3">圓桌3-4</div></div></div></div></body>
+</html>
+收起
+seating-export.html
+4 KB
+盧科璋 — 上午 02:52
+相當的有料啊
+胖呱 — 上午 02:53
+github 我也改了 讓他名子可以對到
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>座位查詢 - 轉置顯示</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f0f8ff;
+    text-align: center;
+  }
+  #seating-area {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+#seating-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+  .tables-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .table {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 248, 220);
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .guest-list {
+    margin-top: 6px;
+    font-size: 14px;
+    background: #fffbea;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 6px 10px;
+    text-align: left;
+  }
+  #original-seating {
+    display: none; /* 隱藏原始座位 */
+  }
+</style>
+</head>
+<body>
+
+<div id="seating-wrapper"><div id="seating-area" style="display: flex; flex-direction: column; gap: 12px; justify-content: center;"><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-1">aa</div><div class="table" data-key="r2-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-2">圓cc</div><div class="table" data-key="r3-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-3">d1</div><div class="table" data-key="r4-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="1-4">ddd</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div><div class="table" data-key="r2-1" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="2-2">d</div><div class="table" data-key="r3-1" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;" data-id="2-3">圓sad</div><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div></div></div></div>
+  
+  <script>
+  const guestData = {
+    "1-1": ["小明", "小美", "小華"],
+    "1-2": ["阿宏", "阿玉", "阿豪"],
+    "1-3": ["佳芳", "麗娟"],
+    "2-1": ["秀蘭", "美玲"],
+    "2-2": ["宇軒", "家豪"],
+    "2-3": ["阿亮", "小強"],
+    "3-1": ["曉恩", "芸芸"],
+    "3-2": ["曉華", "阿福"],
+    "3-3": ["靜宜", "佩佩"],
+    "4-1": ["阿德", "小志"],
+    "4-2": ["佩君", "欣怡"],
+    "4-3": ["阿明", "文傑"],
+    "5-1": ["志強", "婷婷"],
+    "5-2": ["雅雯", "柏豪"],
+    "5-3": ["凱婷", "阿健"]
+  };
+
+  document.querySelectorAll('.table').forEach(table => {
+    table.addEventListener('click', () => {
+      // 移除舊的名單
+      document.querySelectorAll('.guest-list').forEach(e => e.remove());
+
+      const pos = table.getAttribute('data-id');
+      const guests = guestData[pos] || ["（無資料）"];
+
+      const listDiv = document.createElement('div');
+      listDiv.className = 'guest-list';
+      listDiv.innerHTML = `<strong>${table.textContent} 名單：</strong><ul>` +
+        guests.map(name => `<li>${name}</li>`).join('') +
+        `</ul>`;
+
+      table.insertAdjacentElement('afterend', listDiv);
+    });
+  });
+</script>
+... (還剩 5 行)
+收起
+github座位表.html
+4 KB
+桌子
+不會因為隱形桌子 跑掉顯示
+你再用看看 有甚麼問題再跟我說
+我三點會去睡覺 有問題跟我說 我明天早上在處理
+盧科璋 — 上午 03:15
+顯示匯出html的程式碼對不上桌圖
+程式碼給的桌號一樣是從左至右 不是從上到下
+胖呱 — 上午 10:18
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>座位查詢 - 轉置顯示</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f0f8ff;
+    text-align: center;
+  }
+  #seating-area {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+#seating-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+  .tables-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .table {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 248, 220);
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .guest-list {
+    margin-top: 6px;
+    font-size: 14px;
+    background: #fffbea;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 6px 10px;
+    text-align: left;
+  }
+  #original-seating {
+    display: none; /* 隱藏原始座位 */
+  }
+</style>
+</head>
+<body>
+
+<div id="seating-wrapper"><div id="seating-area" style="display: flex; flex-direction: column; gap: 12px; justify-content: center;"><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">圓桌1-1</div><div class="table" data-key="r2-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">圓桌2-1</div><div class="table" data-key="r3-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">圓桌3-1</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div><div class="table" data-key="r2-1" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">圓桌2-2</div><div class="table" data-key="r3-1" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">圓桌3-2</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div><div class="table" data-key="r3-2" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">圓桌3-3</div></div></div></div>
+  
+  <script>
+  const guestData = {
+  "r1-0": ["小明", "小美", "小華"],
+  "r1-1": ["佳芳", "麗娟"],
+  "r2-0": ["阿宏", "阿玉", "阿豪"],
+  "r2-1": ["宇軒", "家豪"],
+  "r3-0": ["曉恩", "芸芸"],
+  "r3-1": ["曉華", "阿福"],
+  "r4-0": ["阿德", "小志"]
+
+  };
+
+  document.querySelectorAll('.table').forEach(table => {
+  table.addEventListener('click', () => {
+    document.querySelectorAll('.guest-list').forEach(e => e.remove());
+
+    const key = table.getAttribute('data-key'); // ✅ 改用 data-key
+    const guests = guestData[key] || ["（無資料）"];
+
+    const listDiv = document.createElement('div');
+    listDiv.className = 'guest-list';
+    listDiv.innerHTML = `<strong>${table.textContent} 名單：</strong><ul>` +
+      guests.map(name => `<li>${name}</li>`).join('') +
+      `</ul>`;
+
+    table.insertAdjacentElement('afterend', listDiv);
+  });
+});
+</script>
+
+
+</body>
+</html>
+收起
+github座位表.html
+4 KB
+你說的是名子顯示錯誤對吧? 我昨晚給的git是沒修改的版本 我丟錯檔案了
+<body>
+  <button onclick="switchView('edit')">自動回應產出</button>
+  <button onclick="switchView('export')">座位圖產出</button>
+
+  <div id="edit-view">
+   <!DOCTYPE html>
+展開
+官方帳號整合網站.html
+43 KB
+我把data-id移掉 1-1 只保留key-id  r0-0 然後git是正確版 這樣名子顯示跟 桌位能對上
+﻿
+胖呱
+.guiquan
+ 
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>座位查詢 - 轉置顯示</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f0f8ff;
+    text-align: center;
+  }
+  #seating-area {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+#seating-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+  .tables-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .table {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 248, 220);
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .guest-list {
+    margin-top: 6px;
+    font-size: 14px;
+    background: #fffbea;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 6px 10px;
+    text-align: left;
+  }
+  #original-seating {
+    display: none; /* 隱藏原始座位 */
+  }
+</style>
+</head>
+<body>
+
+<div id="seating-wrapper"><div id="seating-area" style="display: flex; flex-direction: column; gap: 12px; justify-content: center;"><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table" data-key="r1-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">勝揚</div><div class="table" data-key="r2-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">科璋</div><div class="table" data-key="r3-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">伊森</div><div class="table" data-key="r4-0" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">郁涵</div></div><div class="tables-row" style="display: flex; flex-direction: row; gap: 24px;"><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div><div class="table" data-key="r2-1" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">咪咪</div><div class="table" data-key="r3-1" style="background-color: rgb(255, 248, 220); width: 100px; height: 100px; font-size: 18px;">祐輝</div><div class="table invisible-table" style="visibility: hidden; width: 100px; height: 100px; font-size: 18px;"></div></div></div></div>  
+  <script>
+  const guestData = {
+  "r1-0": ["勝揚""],
+  "r2-0": ["科璋"],
+  "r2-1": ["咪咪"],
+  "r3-0": ["伊森"],
+  "r3-1": ["祐輝"],
+  "r4-0": ["郁涵"]
+
+  };
+
+  document.querySelectorAll('.table').forEach(table => {
+  table.addEventListener('click', () => {
+    document.querySelectorAll('.guest-list').forEach(e => e.remove());
+
+    const key = table.getAttribute('data-key'); // ✅ 改用 data-key
+    const guests = guestData[key] || ["（無資料）"];
+
+    const listDiv = document.createElement('div');
+    listDiv.className = 'guest-list';
+    listDiv.innerHTML = `<strong>${table.textContent} 名單：</strong><ul>` +
+      guests.map(name => `<li>${name}</li>`).join('') +
+      `</ul>`;
+
+    table.insertAdjacentElement('afterend', listDiv);
+  });
+});
 </script>
 
 
